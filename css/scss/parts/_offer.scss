@@ -10,7 +10,7 @@
         text-align: left;
         @include flex($direction: column,$alignI: flex-start, $justify: center);
         h2 {
-            font: 48px $msb;
+            font: 48px $msbl;
             text-transform: uppercase;
             width: 55%;
             border: none;
@@ -25,6 +25,39 @@
         }
         .button {
             margin-top: 30px;
+        }
+    }
+
+    .offer__info__form {
+        width: 375px;
+
+        .form {
+            padding: 25px 50px 50px;
+            background-color: $blue;
+            width: 100%;
+
+            .title {
+                font-size: 22px;
+                color: $yellow;
+                width: 100%;
+                text-transform: uppercase;
+                text-align: center;
+                font-family: $msb;
+            }
+
+            .button {
+                margin: 0;
+            }
+        }
+    }
+    .offer__info__content {
+        width: -webkit-calc(100% - 375px);
+        width: calc(100% - 375px);
+        padding-right: 50px;
+
+        h2,
+        p {
+            width: 100%;
         }
     }
 }

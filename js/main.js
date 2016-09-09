@@ -149,6 +149,19 @@ jQuery(document).ready(function($) {
             collapsible: true
         });    
     }
-    
+
+
+    /*---------------------------
+                                  Reviews slider
+    ---------------------------*/
+    if ( $('.reviews-slider').length > 0) {}
+    $('.reviews-slider').slick({
+        dots: true,
+        fade: false,
+        arrows: false,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+
+    });
 
 }); // end file

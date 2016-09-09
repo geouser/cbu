@@ -9,6 +9,14 @@
     padding: 0 20px;
     -webkit-border-radius: 7px;
             border-radius: 7px;
+
+    &--large {
+        height: 60px;
+        font-family: $msbl;
+        font-size: 28px;
+        border-radius: 0;
+        line-height: 64px;
+    }
 }
 a.button {
     display: inline-block;
