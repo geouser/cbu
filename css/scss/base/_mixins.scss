@@ -37,7 +37,7 @@
 
 
 /* ------------------ flex ----------------- */
-@mixin flex($alignI: center, $justify: space-between, $direction: row, $wrap: nowrap  ) {
+@mixin flex($alignI: center, $justify: space-between, $direction: row, $wrap: wrap  ) {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-flex;
