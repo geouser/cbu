@@ -1,0 +1,14 @@
+.content-section {
+	h2 {
+		text-align: center;
+	}
+
+	p {
+		text-align: left;
+		line-height: 18px;
+
+		&:not(:last-child) {
+			margin-bottom: 25px;
+		}
+	}
+}

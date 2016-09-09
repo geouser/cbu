@@ -1,10 +1,9 @@
 // COLORS
 // ---------------------------
-
-$yellow : #fece0a;
-$blue : #1f8ea4;
-$grey : #231f20;
-$greyL : #5d5d5d;
+$yellow: 		#fece0a;
+$blue: 			#1f8ea4;
+$grey: 			#231f20;
+$greyL: 		#5d5d5d;
 
 // FONTS
 // ---------------------------
@@ -27,21 +26,44 @@ body {
 	height: 100%;
 	font-family: $sr;
 	font-size: 12px;
-	line-height: 18px;
+	color: $greyL;
 }
 body {
     padding-top: 150px;
+}
+
+h2 {
+	font-size: 24px;
+	text-transform: uppercase;
+	color: $blue;
+	border: 2px solid $yellow;
+	border-left-width: 0;
+	border-right-width: 0;
+	font-family: $msb;
+	margin-bottom: 35px;
+	display: inline-block;
+	padding: 3px;
 }
 
 
 // lAYOUT
 // ---------------------------
 .wrapper {
-	width: 940px;
+	width: 970px;
 	padding: 0 15px;
 	margin: 0 auto;
 	text-align: center;
 }
+.line {
+	height: 2px;
+	border: 0;
+	background-color: #E8E8E8;
+	margin: 0;
+	width: 100%;
+}
 .flex {
 	@include flex($alignI: center);
+}
+section {
+	padding: 50px 0;
 }
