@@ -1,0 +1,56 @@
+.application {
+      background-image: url("../images/application_bg.jpg");
+    background-position: center bottom;
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;  
+}
+.applicationForm {
+    .row {
+        @include flex();
+    }
+    input {
+        width: 48%;
+        margin-bottom: 30px;
+        border: 1px solid #cee6ea;
+        background-color: #FFF;
+        -webkit-border-radius: 8px;
+                border-radius: 8px;
+    }
+    textarea {
+        border: 1px solid #cee6ea;
+        background-color: #FFF;
+         margin-bottom: 30px;
+         width: 100%;
+        height: 150px;
+        resize: none;
+        color: $grey;
+        padding: 20px;
+        -webkit-border-radius: 8px;
+                border-radius: 8px;
+    }
+    .button {
+        width: auto;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .additionalInfo {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 25px;
+        width: 50%;
+    }
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    opacity:  1;
+    color: #474747;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   opacity:  1;
+   color: #474747;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   opacity:  1;
+   color: #474747;
+}

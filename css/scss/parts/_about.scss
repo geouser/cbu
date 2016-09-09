@@ -1,5 +1,5 @@
 .about__info {
-    @include flex($justify: flex-start);
+    @include flex($justify: flex-start, $wrap: nowrap);
     &__text {
         margin-right: 20px;
         .exclaim {
