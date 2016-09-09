@@ -60,6 +60,28 @@
                 color: $grey;
                 font: 14px $msbl;
                 text-transform: uppercase;
+                display: inline-block;
+                vertical-align: middle;
+            }
+            &:after {
+                content: "";
+                display: inline-block;
+                vertical-align: middle;
+                height: 30px;
+                background-color: #000;
+                opacity: .1;
+                width: 1px;
+                margin-left: 50px;
+            }
+            &:first-of-type:before {
+                content: "";
+                display: inline-block;
+                vertical-align: middle;
+                height: 30px;
+                background-color: #000;
+                opacity: .1;
+                width: 1px;
+                margin-right: 50px;
             }
         }
     }

@@ -30,6 +30,7 @@ body {
 }
 body {
     padding-top: 150px;
+    background-color: #EEFAFC;
 }
 
 h2 {
@@ -43,6 +44,10 @@ h2 {
 	margin-bottom: 35px;
 	display: inline-block;
 	padding: 3px;
+}
+.titleInfo {
+	font: 16px $sr;
+	margin-bottom: 35px;
 }
 
 

@@ -1,0 +1,22 @@
+.services__list {
+    @include flex();
+}
+.service {
+    width: 210px;
+    min-height: 220px;
+    padding: 6px;
+    background: #FFF;
+    box-shadow: 0px 0px 27px 0px rgba(31, 142, 164, 0.1);
+    &__img {
+        height: 135px;
+        img {
+            max-width: 100%;
+        }
+        margin-bottom: 25px;
+    }
+    span {
+        font: 16px/24px $msb;
+        text-transform: uppercase;
+        color: $blue;
+    }
+}
