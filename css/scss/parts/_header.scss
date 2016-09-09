@@ -33,6 +33,26 @@
         }
         .leave {
             width: 195px;  
+            span{
+                display: block;
+                font: 12px $sr;
+                color: #B8B8B8;
+            }
+            a {
+                font: 13px $msb;
+                color: $yellow;
+                text-transform: uppercase;
+                text-decoration: underline;
+                display: block;
+                margin-top: 5px;
+            }
+            .tel {
+                font: 20px $msb;
+                display: block;
+                color: #474747;
+                margin-bottom: 5px;
+                text-decoration: none;
+            }
         }
     }
     &__bottom {
@@ -50,18 +70,22 @@
 /* ------------------------------------ */
 /*  Services navigation  */
 .servicesNav {
-    ul {
-        @include flex();
+    > ul {
+        @include flex($justify: center);
         height: 56px;
         margin: 0;
         list-style-type: none;
-        li {
-            a {
+        > li {
+            position: relative;
+            background-color: transparent;
+            > a {
                 color: $grey;
                 font: 14px $msbl;
                 text-transform: uppercase;
                 display: inline-block;
                 vertical-align: middle;
+                line-height: 55px;
+                padding: 0 45px;
             }
             &:after {
                 content: "";
@@ -71,7 +95,6 @@
                 background-color: #000;
                 opacity: .1;
                 width: 1px;
-                margin-left: 50px;
             }
             &:first-of-type:before {
                 content: "";
@@ -81,7 +104,122 @@
                 background-color: #000;
                 opacity: .1;
                 width: 1px;
-                margin-right: 50px;
+            }
+            &.hasSub {
+                a {
+                    padding-right: 0;
+                }
+                > a:after {
+                    width: 0;
+                    height: 0;
+                    border-left: 4px solid transparent;
+                    border-right: 4px solid transparent;
+                    border-top: 7px solid rgba(0,0,0,.5);
+                    content: "";
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-right: 35px;
+                    margin-left: 5px;
+                    margin-top: -2px;
+                }
+            }
+            > .sub {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 290px;
+                margin: 0;
+                background-color: #f2f6f7;
+                display: block;
+                text-align: left;
+                box-shadow: 0px 8px 51px 0px rgba(0, 0, 0, 0.2);
+                visibility: hidden;
+                opacity: 0;
+                transition: visibility 0s;
+                transition: opacity .2s;
+                > li {
+                    display: block;
+                    border-bottom: 1px solid #bed6dc;
+                    position: relative;
+                    padding: 0 20px;
+                    a {
+                        color: $blue;
+                        font: 14px/45px $msb;
+                        display: block;
+                        width: 100%;
+                    }
+                    &.hasSub {
+                        > a:before {
+                            width: 0;
+                            height: 0;
+                            border-top: 4px solid transparent;
+                            border-bottom: 4px solid transparent;
+                            border-left: 7px solid $yellow;
+                            content: "";
+                            display: inline-block;
+                            vertical-align: middle;
+                            margin-right: 10px;
+                        }
+                    }
+                    &:last-of-type {
+                        border: none;
+                    }
+                    > .sub {
+                        position: absolute;
+                        left: 290px;
+                        width: 100%;
+                        top: 0;
+                        padding: 0 16px;
+                        margin: 0;
+                        background-color: #FFF;
+                        box-shadow: 0px 8px 51px 0px rgba(0, 0, 0, 0.2);
+                        z-index: 1;
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: visibility .0s;
+                        transition: opacity .2s;
+                        li {
+                            display: block;
+                            border-bottom: 1px solid #deeaed;
+                            position: relative;
+                            a {
+                                font: 12px/35px $sr;
+                                text-decoration: underline;
+                                display: block;
+                                width: 100%;
+                            }
+                            &:last-of-type {
+                                border: none;
+                            }
+                            &:hover {
+                                a {
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                    &:hover {
+                        background-color: #FFF;
+                        z-index: 2;
+                        .sub {
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+            &:hover {
+                background-color: #1f8ea4;
+                > a {
+                    color: #fff;
+                    &:after {
+                        border-top: 7px solid rgba(255,255,255,.5);
+                    }
+                }
+                > .sub {
+                    visibility: visible;
+                    opacity: 1;
+                }
             }
         }
     }

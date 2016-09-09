@@ -21,6 +21,14 @@ jQuery(document).ready(function($) {
             $element2.toggleClass(className, $document.scrollTop() >= 1);
         });
     });
+
+
+    $('li:has(ul)').addClass('hasSub');
+
+    $('nav li.hasSub>a').click(function(e){
+      e.preventDefault();
+    });
+
       
 
     /*---------------------------
