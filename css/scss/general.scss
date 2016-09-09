@@ -1,8 +1,8 @@
 /*Base styles*/
 @import 'base/reset';
 @import 'base/fonts';
-@import 'base/settings';
 @import 'base/mixins';
+@import 'base/settings';
 
 
 /*Plugins styles*/
@@ -14,4 +14,5 @@
 /*Parts styles*/
 
 @import 'parts/header';
+@import 'parts/footer';
 @import 'parts/popup';

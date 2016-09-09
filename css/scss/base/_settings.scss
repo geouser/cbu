@@ -36,3 +36,6 @@ body {
 	margin: 0 auto;
 	text-align: center;
 }
+.flex {
+	@include flex($alignI: center);
+}
