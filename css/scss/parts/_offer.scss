@@ -1,3 +1,27 @@
 .offer {
-    height: 800px;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+    .wrapper {
+        height: 100%;
+        text-align: left;
+        @include flex($direction: column,$alignI: flex-start, $justify: center);
+        h2 {
+            font: 48px $msb;
+            text-transform: uppercase;
+            width: 55%;
+        }
+        p {
+            font: 18px/30px $sr;
+            color: $greyL;
+            margin-top: 0;
+            width: 55%;
+        }
+        .button {
+            margin-top: 30px;
+        }
+    }
 }

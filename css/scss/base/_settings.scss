@@ -1,7 +1,10 @@
 // COLORS
 // ---------------------------
 
-
+$yellow : #fece0a;
+$blue : #1f8ea4;
+$grey : #231f20;
+$greyL : #5d5d5d;
 
 // FONTS
 // ---------------------------
@@ -26,12 +29,15 @@ body {
 	font-size: 12px;
 	line-height: 18px;
 }
+body {
+    padding-top: 150px;
+}
 
 
 // lAYOUT
 // ---------------------------
 .wrapper {
-	width: 970px;
+	width: 940px;
 	padding: 0 15px;
 	margin: 0 auto;
 	text-align: center;
