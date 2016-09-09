@@ -1,0 +1,43 @@
+.about__info {
+    @include flex($justify: flex-start);
+    &__text {
+        margin-right: 20px;
+        .exclaim {
+            display: block;
+            text-transform: uppercase;
+            font: 18px $msb;
+            text-transform: uppercase;
+            color: #000;
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+    }
+    &__slider {
+        width: 375px;
+    }
+}
+
+.slick-dots {
+    bottom: 20px;
+    margin: 0;
+    li {
+        border: 2px solid $yellow;
+        width: 15px;
+        height: 15px;
+        -webkit-border-radius: 50%;
+                border-radius: 50%;
+        display: inline-block;
+        margin: 0 5px;
+        &.slick-active {
+            background-color: $yellow;
+        }
+        &:before {
+            display: none;
+        }
+        button {
+            display: none;
+        }
+    }
+}

@@ -1,12 +1,13 @@
-.services__list {
-    @include flex();
+.preview__list {
+    @include flex($wrap: wrap);
 }
-.service {
+.preview {
     width: 210px;
     min-height: 220px;
     padding: 6px;
     background: #FFF;
     box-shadow: 0px 0px 27px 0px rgba(31, 142, 164, 0.1);
+    margin-bottom: 30px;
     &__img {
         height: 135px;
         img {
@@ -14,9 +15,12 @@
         }
         margin-bottom: 25px;
     }
-    span {
+    h4 {
         font: 16px/24px $msb;
         text-transform: uppercase;
         color: $blue;
+    }
+    span {
+        font: 14px $sr;
     }
 }

@@ -31,8 +31,6 @@ jQuery(document).ready(function($) {
 
 
 
-
-
     /*---------------------------
                                   MixItUp
     ---------------------------*/
@@ -78,7 +76,11 @@ jQuery(document).ready(function($) {
         mainClass: 'my-mfp-slide-bottom'
     });
 
-
+    $('.about__info__slider').slick({
+        dots: true,
+        fade: true,
+        arrows: false
+    });
 
     /*----------------------------
                               SEND FORM

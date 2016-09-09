@@ -33,7 +33,7 @@ body {
     padding-top: 150px;
 }    
 
-body.blueBg {
+.blueBg {
     background-color: #EEFAFC;
 }
 
@@ -59,8 +59,9 @@ h2,
 }
 .titleInfo {
 	font: 16px $sr;
-	margin-bottom: 35px;
-	max-width: 60%;
+	max-width: 80%;
+	display: block;
+	margin: 0 auto 35px;
 }
 
 
