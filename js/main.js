@@ -30,9 +30,14 @@ jQuery(document).ready(function($) {
     });
 
 
-    if($('#Container').length >0) {
+
+    /*---------------------------
+                                  MixItUp
+    ---------------------------*/
+    if ( $('#Container').length > 0 ) {
         $('#Container').mixItUp();
     }
+    
 
 
     /*---------------------------
@@ -133,5 +138,17 @@ jQuery(document).ready(function($) {
         });
         
     });
+
+
+    /*----------------------------
+                              ACCORDEON
+    -------------------------*/
+    if ( $('.accordeon').length > 0) {
+        $('.accordeon').accordion({
+            heightStyle: "content",
+            collapsible: true
+        });    
+    }
+    
 
 }); // end file
