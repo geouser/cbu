@@ -30,7 +30,9 @@ jQuery(document).ready(function($) {
     });
 
 
-    $('#Container').mixItUp();
+    if($('#Container').length >0) {
+        $('#Container').mixItUp();
+    }
 
 
     /*---------------------------
@@ -69,7 +71,11 @@ jQuery(document).ready(function($) {
         mainClass: 'my-mfp-slide-bottom'
     });
 
-
+    $('.about__info__slider').slick({
+        dots: true,
+        fade: true,
+        arrows: false
+    });
 
     /*----------------------------
                               SEND FORM

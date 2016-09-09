@@ -1,0 +1,45 @@
+.advantages {
+    @include flex($justify: flex-start);
+    &__item {
+        margin-right: 10px;
+        &:last-of-type {
+            margin-right: 0;
+        }
+        i {
+            display: inline-block;
+            vertical-align: middle;
+            width: 60px;
+            height: 60px;
+            background-image: url("../images/advantages_icons.png");
+            background-repeat: no-repeat;
+            margin-right: 10px;
+            &.gar {
+                background-position: 0 0;
+            }
+            &.years {
+                background-position: -241px 0
+            }
+            &.clients {
+                background-position: -119px 0
+            }
+            &.services {
+                background-position: -362px 0
+            }
+        }
+         &__info {
+            display: inline-block;
+            vertical-align: middle;
+            width: 153px;
+            text-align: left;
+            p {
+                font: 14px $sr;
+                span {
+                    display: block;
+                    font: 18px $msb;
+                    color: $blue;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
