@@ -27,9 +27,9 @@ body {
 	font-family: $sr;
 	font-size: 12px;
 	color: $greyL;
+	padding-top: 150px;
 }
-body {
-    padding-top: 150px;
+body.blueBg {
     background-color: #EEFAFC;
 }
 

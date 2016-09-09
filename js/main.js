@@ -29,7 +29,9 @@ jQuery(document).ready(function($) {
       e.preventDefault();
     });
 
-      
+
+    $('#Container').mixItUp();
+
 
     /*---------------------------
                                   MENU TOGGLE
