@@ -1,10 +1,10 @@
          
 .mainHeader {
     @include position(absolute, 0, auto, auto, 0);
+    margin: 0;
     width: 100%;
     z-index: 100;
     background: #fff;
-    margin: 0;
     @include transition(all, .4s);
     
         /*.................media.............*/
@@ -25,36 +25,61 @@
             }
         }
         /*.............end media..............*/
+    
+    &__top {
+        .wrapper {
+            @include flex();
+            height: 100px;
+        }
+        .leave {
+            width: 195px;  
+        }
+    }
+    &__bottom {
+        background-color: $yellow;
+    }
 }
 
+.logo {
+    width: 195px;
+    img {
+        max-width: 100%;
+    }
+}
 
 /* ------------------------------------ */
-/*  NAV STYLES  */
-.mainNav {
+/*  Services navigation  */
+.servicesNav {
     ul {
         @include flex();
+        height: 56px;
+        margin: 0;
         list-style-type: none;
-        a {
-            display: inline-block;
-            margin: 0 20px;
-            text-decoration: none;
-            @include transition(all, .2s);             
-            &:hover {}
-        }
-
-            /*.................media.............*/
-            @include m800 { 
-                display: block;
-                height: 100%;
-                overflow: scroll;
-                position: relative;
-                li a  {   
-                    margin: 0 0 25px 0;
-                    &.active {color: #ECCC1D;}
-                    &:hover  {background: transparent;}
-                } 
+        li {
+            a {
+                color: $grey;
+                font: 14px $msbl;
+                text-transform: uppercase;
             }
-            /*.............end media.............*/
+        }
+    }
+}
+
+/* ------------------------------------ */
+/*  Pages navigation  */
+.pagesNav {
+    width: calc(100% - 390px);
+    ul {
+        list-style-type: none;
+        @include flex($justify: space-around);
+        margin: 0;
+        li {
+            a {
+                font: 12px $msb;
+                text-transform: uppercase;
+                color: $blue;
+            }
+        }
     }
 }
 

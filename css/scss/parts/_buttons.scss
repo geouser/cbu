@@ -1,0 +1,12 @@
+.button {
+    background-color: $yellow;
+    height: 45px;
+    text-align: center;
+    font: 16px/45px $msbl;
+    text-transform: uppercase;
+    color: $grey;
+    border: none;
+    padding: 0 20px;
+    -webkit-border-radius: 7px;
+            border-radius: 7px;
+}
