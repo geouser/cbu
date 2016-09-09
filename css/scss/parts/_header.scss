@@ -94,12 +94,27 @@
     ul {
         list-style-type: none;
         @include flex($justify: space-around);
+        padding: 0 15px;
         margin: 0;
         li {
             a {
                 font: 12px $msb;
                 text-transform: uppercase;
                 color: $blue;
+                display: inline-block;
+                vertical-align: middle;
+            }
+            &:after {
+                content: "";
+                display: inline-block;
+                vertical-align: middle;
+                height: 12px;
+                background-color: #d1d1d1;
+                width: 1px;
+                margin-left: 16px;
+            }
+            &:last-of-type:after {
+                display: none;
             }
         }
     }
