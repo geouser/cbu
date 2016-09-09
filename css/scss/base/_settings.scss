@@ -5,7 +5,11 @@
 
 // FONTS
 // ---------------------------
+$sr:			"SegoeUIRegular";
+$sb:			"SegoeUIBold";
 
+$msb:			"MuseoSansBold";
+$msbl:			"MuseoSansBlack";
 
 
 // RESPONSIVE
@@ -18,13 +22,17 @@
 html,
 body {
 	height: 100%;
+	font-family: $sr;
+	font-size: 12px;
+	line-height: 18px;
 }
 
 
 // lAYOUT
 // ---------------------------
 .wrapper {
-	width: 1200px;
+	width: 970px;
+	padding: 0 15px;
 	margin: 0 auto;
 	text-align: center;
 }
