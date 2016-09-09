@@ -1,0 +1,64 @@
+.reviews {
+	padding-bottom: 0;
+	&__total {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 14px;
+		color: #b2b2b2;
+		margin-left: 30px;
+	}
+	.section-heading .button {
+		display: block;
+		margin-top: 35px;
+	}
+
+
+	.reviews-box {
+		padding: 50px 0;
+		background-image: url(../images/reviews.png);
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: 50% 100%;
+		.wrapper {
+			@include flex($alignI: flex-start, $justify: flex-start);
+			padding: 0;
+		}
+	}
+}
+
+.review {
+	width: 25%;
+	padding: 0 15px;
+
+	&__heading {
+		margin-bottom: 25px;
+
+		&__image {
+			width: 80px;
+			height: 80px;
+			border: 2px solid $yellow;
+			border-radius: 50%;
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 5px;
+		}
+
+		&__person {
+			text-align: left;
+			display: inline-block;
+			vertical-align: middle;
+			width: -webkit-calc(100% - 95px);
+			width: calc(100% - 95px);
+
+			.name {
+				font-size: 18px;
+				color: $blue;
+				font-family: $msb;
+			}
+
+			.position {
+				font-size: 14px;
+			}
+		}
+	}
+}
