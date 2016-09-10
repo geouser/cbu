@@ -29,6 +29,11 @@ jQuery(document).ready(function($) {
       e.preventDefault();
     });
 
+    $('.hasSub a').click(function(){
+        $(this).parent().toggleClass('active');
+        $(this).siblings('.sub').slideToggle();
+    });
+
 
 
     /*---------------------------

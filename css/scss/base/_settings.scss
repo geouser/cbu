@@ -31,6 +31,9 @@ body {
 
 body {
     padding-top: 150px;
+    @include m1000 {
+		padding-top: 0;
+	}
 }    
 
 .blueBg {
@@ -72,6 +75,9 @@ h2,
 	padding: 0 15px;
 	margin: 0 auto;
 	text-align: center;
+	@include m1000 {
+		width: 100%;
+	}
 }
 .line {
 	height: 2px;
