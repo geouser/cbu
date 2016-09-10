@@ -55,7 +55,6 @@
 
     .offer__info__form {
         width: 375px;
-
         .form {
             padding: 25px 50px 50px;
             background-color: $blue;
@@ -74,12 +73,25 @@
                 margin: 0;
             }
         }
+        @include m1000 {
+            margin: 20px auto 0;
+        }
+        @media (max-width: 400px) {
+           width: 290px;
+           .form {
+               padding: 25px 25px 50px;
+           }
+        }
     }
     .offer__info__content {
         width: -webkit-calc(100% - 375px);
         width: calc(100% - 375px);
         padding-right: 50px;
-
+        @include m1000 {
+            width: 100%;
+            padding: 0;
+            margin-bottom: 20px;
+        }
         h2,
         p {
             width: 100%;

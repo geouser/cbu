@@ -2,6 +2,10 @@
 	.examples-box {
 		@include flex($alignI: strerch, $justify: space-between);
 		padding-bottom: 40px;
+		@include m1000 {
+	        -webkit-justify-content: center;
+	                justify-content: center;
+	    }
 	}
 }
 
@@ -12,7 +16,9 @@
 	text-align: left;
 	color: $greyL;
   	box-shadow: 0px 0px 50px 0px rgba( 31, 103, 117, .19 );
-
+	@include m1000 {
+        margin: 0 10px 20px;
+    }
 
 	&__preview {
 		background-position: 50% 50%;
