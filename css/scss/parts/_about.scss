@@ -1,3 +1,6 @@
+.about {
+    padding-bottom: 0;
+}
 .about .wrapper {
     text-align: left;
 }
@@ -26,6 +29,12 @@
     }
     &__slider {
         width: 375px;
+        @include m1000 {
+            width: 500px;
+        }
+        @include m600 {
+            width: 290px;
+        }
     }
 }
 
