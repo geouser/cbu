@@ -111,3 +111,11 @@
         }
     }
 }
+
+.remontPage {
+    .offer {
+        @include m1000 {
+            background: #EEFAFC !important;
+        }
+    }
+}
