@@ -6,10 +6,19 @@
 	.sidebar {
 		width: 290px;
 
+		@media ($tablets) {
+			width: 100%;
+			margin-bottom: 50px;
+		}
+
 		.form {
 			background-color: $blue;
 			padding: 30px 40px 40px;
 			text-align: center;
+
+			@media ($tablets) {
+				display: none;
+			}
 
 			.title {
 				text-align: center;
@@ -21,8 +30,16 @@
 		width: -webkit-calc(100% - 290px);
 		width: calc(100% - 290px);
 
+		@media ($tablets) {
+			width: 100%;
+		}
+
 		.content-wrapper {
 			padding-left: 30px;
+
+			@media ($tablets) {
+				padding-left: 0;
+			}
 		}
 
 		&__heading {
@@ -32,9 +49,19 @@
 			margin-bottom: 40px;
 			@extend %clearfix;
 
+			@media ($tablets) {
+				padding: 15px;
+			}
+
 			.service-preview {
 				float: right;
 				margin-left: 20px;
+
+				@media ($phones) {
+					display: block;
+					margin: 0 auto 25px auto;
+					float: none;
+				}
 			}
 
 			h2 {
@@ -70,6 +97,17 @@
 				font-size: 14px;
 				font-family: $msb;
 				color: #231f20;
+
+				@media ($phones) {
+					font-size: 12px;
+					font-family: $sr;
+					border: 0;
+				}
+
+				@media (max-width: 500px) {
+					font-size: 11px;
+				}
+
 				tr td {
 					padding: 15px 0;
 					position: relative;
@@ -77,9 +115,18 @@
 					padding-left: 10px;
 					padding-right: 10px;
 
+					@media ($phones) {
+						padding-left: 5px;
+						padding-right: 5px;
+					}
+
 					&:first-child {
 						padding-left: 20px;
 						text-align: left;
+
+						@media ($phones) {
+							padding-left: 5px;
+						}
 					}
 
 					&:not(:last-child):after {
@@ -102,6 +149,15 @@
 						text-decoration: underline;
 						font-size: 13px;
 						font-family: $msbl;
+
+						@media ($phones) {
+							font-size: 12px;
+							font-family: $sr;
+						}
+						@media (max-width: 500px) {
+							font-size: 11px;
+							text-transform: none;
+						}
 					}
 				}
 				tr:nth-child(even) {
@@ -138,6 +194,10 @@
 			padding: 28px 30px 15px 30px;
 			margin-bottom: 40px;
 
+			@media ($tablets) {
+				padding: 15px;
+			}
+
 			.title {
 				font-size: 18px;
 				color: #231f20;
@@ -170,6 +230,10 @@
 					text-align: center;
 					margin-top: 50px;
 					counter-increment: steps;
+
+					@media ($phones) {
+						width: 100%;
+					}
 
 					&:before {
 						content: '0'counter(steps);

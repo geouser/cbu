@@ -40,7 +40,13 @@ jQuery(document).ready(function($) {
                                   MixItUp
     ---------------------------*/
     if ( $('#Container').length > 0 ) {
-        $('#Container').mixItUp();
+        $('#Container').mixItUp({
+            animation: {
+                duration: 400,
+                effects: 'fade translateZ(-360px) stagger(34ms)',
+                easing: 'ease'
+            }
+        });
     }
     
 

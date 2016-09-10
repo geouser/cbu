@@ -101,6 +101,10 @@
 		position: relative;
 		padding-left: 70px;
 
+		@media ($phones) {
+			font-size: 12px;
+		}
+
 		&:before {
 			content: '';
 			width: 41px;
