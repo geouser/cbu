@@ -55,10 +55,21 @@
 
     .offer__info__form {
         width: 375px;
+
+        @media ($tablets) {
+            width: 100%;
+        }
+
         .form {
             padding: 25px 50px 50px;
             background-color: $blue;
             width: 100%;
+
+            @media ($tablets) {
+                width: 290px;
+                margin: 0 auto;
+                padding: 20px;
+            }
 
             .title {
                 font-size: 22px;
@@ -87,11 +98,13 @@
         width: -webkit-calc(100% - 375px);
         width: calc(100% - 375px);
         padding-right: 50px;
-        @include m1000 {
+
+        @media ($tablets) {
             width: 100%;
-            padding: 0;
-            margin-bottom: 20px;
+            padding-right: 0;
+            margin-bottom: 50px;
         }
+
         h2,
         p {
             width: 100%;
