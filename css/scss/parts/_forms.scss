@@ -93,9 +93,29 @@
 	&--horizontal {
 		@include flex($alignI: center);
 
+		@media ($tablets) {
+			text-align: center;
+			-webkit-flex-direction: column;
+		    -ms-flex-direction: column;
+		    flex-direction: column;
+
+			.title {
+				text-align: center;
+
+				& + small {
+					text-align: center;
+				}
+			}
+		}
+
 		.form-group {
 			width: 25%;
 			padding: 0 15px;
+
+			@media ($tablets) {
+				width: 300px;
+				margin: 10px 0;
+			}
 		}
 	}
 }

@@ -2,6 +2,14 @@
 	background-color: #231F20;
 	padding: 25px 0;
 
+	@media ($tablets) {
+		.wrapper {
+			-webkit-flex-direction: column;
+		    -ms-flex-direction: column;
+		    flex-direction: column;
+		}
+	}
+
 	&__logo,
 	&__phone {
 		width: 220px;
@@ -9,12 +17,25 @@
 
 	&__nav {
 		width: -webkit-calc(100% - 440px);
-		width: calc(100% - 440px)
+		width: calc(100% - 440px);
+
+		@media ($tablets) {
+			margin-bottom: 25px;
+			width: 100%;
+		}
 	}
 
 	&__logo {
 		text-align: left;
 		color: #fff;
+
+		@media ($tablets) {
+			-webkit-order: 3;
+		    -ms-flex-order: 3;
+		    order: 3;
+		    text-align: center;
+		    margin-top: 25px;
+		}
 
 		a {
 			display: inline-block;
@@ -40,8 +61,16 @@
 			padding: 0 10px;
 			font-family: $msb;
 
+			@media ($tablets) {
+				padding: 5px 10px;
+			}
+
 			&:not(:last-child) {
 				border-right: 1px solid #484848;
+
+				@media ($phones) {
+					border-right:0;
+				}
 			}
 
 			a {
