@@ -1,3 +1,6 @@
+.about .wrapper {
+    text-align: left;
+}
 .about__info {
     @include flex($justify: flex-start, $wrap: nowrap);
     @include m800 {
