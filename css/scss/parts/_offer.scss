@@ -84,6 +84,15 @@
                 margin: 0;
             }
         }
+        @include m1000 {
+            margin: 20px auto 0;
+        }
+        @media (max-width: 400px) {
+           width: 290px;
+           .form {
+               padding: 25px 25px 50px;
+           }
+        }
     }
     .offer__info__content {
         width: -webkit-calc(100% - 375px);
