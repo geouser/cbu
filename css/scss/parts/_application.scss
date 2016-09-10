@@ -4,8 +4,10 @@
     -webkit-background-size: cover;
          -o-background-size: cover;
             background-size: cover;  
+    text-align: left;
 }
 .applicationForm {
+    text-align: left;
     .row {
         @include flex();
     }

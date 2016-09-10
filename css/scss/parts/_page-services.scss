@@ -1,0 +1,262 @@
+.section-services {
+	.wrapper {
+		@include flex($alignI: flex-start);
+	}
+
+	.sidebar {
+		width: 290px;
+
+		.form {
+			background-color: $blue;
+			padding: 30px 40px 40px;
+			text-align: center;
+
+			.title {
+				text-align: center;
+			}
+		}
+	}
+
+	.content {
+		width: -webkit-calc(100% - 290px);
+		width: calc(100% - 290px);
+
+		.content-wrapper {
+			padding-left: 30px;
+		}
+
+		&__heading {
+			background-color: #F2F6F7;
+			padding: 20px 20px 20px 30px;
+			text-align: left;
+			margin-bottom: 40px;
+			@extend %clearfix;
+
+			.service-preview {
+				float: right;
+				margin-left: 20px;
+			}
+
+			h2 {
+				border: 0;
+				color: #231f20;
+				margin-bottom: 6px;
+
+			}
+		}
+
+
+		&__price-list {
+			background-color: $blue;
+			padding: 15px 10px;
+			text-align: left;
+			@extend %clearfix;
+			margin-bottom: 40px;
+
+			.title {
+				color: #fff;
+				font-size: 18px;
+				font-family: $msb;
+				margin-bottom: 15px;
+				padding-left: 20px;
+			}
+
+			table {
+				background-color: #F2F6F7;
+				width: 100%;
+				border: 10px solid #F2F6F7;
+				border-top-width: 0;
+				border-bottom-width: 0; 
+				font-size: 14px;
+				font-family: $msb;
+				color: #231f20;
+				tr td {
+					padding: 15px 0;
+					position: relative;
+					text-align: center;
+					padding-left: 10px;
+					padding-right: 10px;
+
+					&:first-child {
+						padding-left: 20px;
+						text-align: left;
+					}
+
+					&:not(:last-child):after {
+						width: 1px;
+						height: 20px;
+						content: '';
+						position: absolute;
+						top: 50%;
+						-webkit-transform: translateY(-50%);
+						-ms-transform: translateY(-50%);
+						-o-transform: translateY(-50%);
+						transform: translateY(-50%);
+						right: 0;
+						background-color: #BED6DC;
+					}
+
+					a {
+						text-transform: uppercase;
+						color: $yellow;
+						text-decoration: underline;
+						font-size: 13px;
+						font-family: $msbl;
+					}
+				}
+				tr:nth-child(even) {
+					background-color: #fff;
+				}
+			}
+
+			p {
+				color: #fff;
+				font-family: $msb;
+				font-size: 14px;
+				margin-top: 15px;
+
+				.price {
+					color: $yellow;
+					text-transform: uppercase;
+				}
+
+				&.pull-left {
+					float: left;
+					padding-left: 20px;
+				}
+
+				&.pull-right {
+					float: right;
+				}
+			}
+		}
+
+
+		&__advice {
+			background-color: #F2F6F7;
+			text-align: left;
+			padding: 28px 30px 15px 30px;
+			margin-bottom: 40px;
+
+			.title {
+				font-size: 18px;
+				color: #231f20;
+				font-family: $msb;
+				margin-bottom: 10px;
+			}
+			p {
+				color: #231f20;
+			}
+		}
+
+
+		&__scheme {
+			text-align: left;
+			.title {
+				font-size: 18px;
+				font-family: $msb;
+				color: #231f20;
+			}
+
+			.scheme-box {
+				@include flex($alignI: stretch, $justify: space-between);
+				counter-reset: steps;
+
+				.scheme__step {
+					width: 195px;
+					position: relative;
+					background-color: #F2F6F7;
+					padding: 50px 20px 20px;
+					text-align: center;
+					margin-top: 50px;
+					counter-increment: steps;
+
+					&:before {
+						content: '0'counter(steps);
+						width: 70px;
+						height: 70px;
+						background-color: $blue;
+						color: $yellow;
+						position: absolute;
+						left: 50%;
+						margin-left: -35px;
+						top: -35px;
+						border-radius: 50%;
+						font-size: 36px;
+						font-family: $msb;
+						line-height: 70px;
+					}
+
+					.title {
+						font-size: 16px;
+						margin-bottom: 5px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.sidebar__menu {
+	background-color: #F2F6F7;
+	text-align: left;
+	padding: 0 18px;
+	margin-top: 30px;
+
+	ul {
+		margin: 0;
+	}
+
+	.menu-item {
+		a {
+			padding: 16px 0 14px;
+			border-bottom: 1px solid #BED6DC;
+			display: block;
+			font-family: $msb;
+			color: $blue;
+			font-size: 14px;
+			padding-left: 13px;
+			position: relative;
+		}
+
+		&:last-child a {
+			border-bottom: 0;
+		}
+
+		.sub-menu {
+			background-color: #fff;
+			padding: 5px 20px;
+			margin: 0;
+			display: none;
+			
+			.menu-item a {
+				font-size: 12px;
+				font-family: $sr;
+				padding: 8px 0 9px;
+				text-decoration: underline;
+				color: #1f8ea4;
+				border-bottom-color: #DEEAED;
+			}
+		}
+	}
+
+	.menu-item-has-children {
+		&.active > a {
+			border-bottom: 0;
+		}
+
+		& > a:before {
+		    content: "";
+		    display: inline-block;
+		    width: 0;
+		    height: 0;
+		    border-style: solid;
+		    border-width: 3px 0 3px 5.2px;
+		    border-color: transparent transparent transparent #FECE09;
+		    position: absolute;
+		    left: 0;
+		    top: 50%;
+		    margin-top: -3px;
+		}
+	}
+}
