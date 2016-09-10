@@ -161,7 +161,20 @@ jQuery(document).ready(function($) {
         arrows: false,
         slidesToShow: 4,
         slidesToScroll: 1,
-
     });
+
+
+
+    /*---------------------------
+                                  Sidebar menu
+    ---------------------------*/
+    $('.sidebar__menu .menu-item-has-children').on('click', function(event) {
+        event.preventDefault();
+        $(this).toggleClass('active');
+        $(this).find('.sub-menu').slideToggle();
+    });
+
+
+
 
 }); // end file

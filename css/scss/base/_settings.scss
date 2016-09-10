@@ -56,6 +56,7 @@ h2,
 }
 .page-title {
 	margin-bottom: 0;
+	max-width: 60%
 }
 .titleInfo {
 	font: 16px $sr;
@@ -92,4 +93,5 @@ section {
 .section-heading {
 	text-align: left;
 	padding-bottom: 35px;
+	width: 100%;
 }
