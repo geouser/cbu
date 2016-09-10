@@ -1,9 +1,19 @@
 .advantages {
     @include flex($justify: flex-start);
+    @include m1000 {
+       -webkit-justify-content: center;
+               justify-content: center;
+    }
     &__item {
         margin-right: 10px;
+        @include m1000 {
+            margin-bottom: 30px;
+        }
         &:last-of-type {
             margin-right: 0;
+            @include m1000 {
+                margin-bottom: 0px;
+            }
         }
         i {
             display: inline-block;
