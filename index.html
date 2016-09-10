@@ -93,7 +93,7 @@
             <div class="offer__info wrapper"><!-- start offerInfo -->
                 <h2>Акция №1</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus magnam illo facilis repellendus expedita iste, dolore a nemo fuga! Maxime velit consectetur laborum blanditiis molestiae illum vero nemo consequatur architecto.</p>
-                <button class="button">Заказать услугу</button>
+                <button href="#modal-popup-review" class="button magnific">Заказать услугу</button>
             </div><!-- end offerInfo -->
         </section><!-- end offer section --> 
 
@@ -268,7 +268,62 @@
             </div>
         </footer> <!-- end footer -->
 
-        <div id="modal-popup" class="mfp-hide zoom-anim-dialog popup"></div>
+        <div id="modal-popup-order-call" class="mfp-hide zoom-anim-dialog popup">
+            <form action="#" class="form">
+                <div class="form-group">
+                    <p class="title">Оставьте заявку</p>
+                    <small>и мы вам перезвоним!</small>
+                </div>
+                <div class="form-group">
+                    <span class="form-input name">
+                        <input type="text" name="name" placeholder="Введите имя" required>
+                    </span>
+                </div>
+                <div class="form-group">
+                    <span class="form-input phone">
+                        <input type="tel" name="phone" placeholder="Введите телефон" required>
+                    </span>
+                </div>
+                <div class="form-group">
+                    <button class="button">Заказать звонок</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="modal-popup-review" class="mfp-hide zoom-anim-dialog popup">
+            <form action="#" class="form">
+                <div class="form-group">
+                    <p class="title">Оставьте отзыв</p>
+                </div>
+                <div class="form-group">
+                    <span class="form-input">
+                        <input type="text" name="name" placeholder="Введите имя" required>
+                    </span>
+                </div>
+                <div class="form-group">
+                    <span class="form-input">
+                        <input type="text" name="position" placeholder="Введите вашу должность" required>
+                    </span>
+                </div>
+                <div class="form-group">
+                    <div class="user-image"></div>
+                    <div class="file-info">
+                        <span class="custom-file-input">
+                            <label for="file-load">Выберите фото</label>
+                            <input type="file" name="user_photo" id="file-load">
+                        </span>
+                        
+                        <small class="file-info__name">Файл не выбран</small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <textarea name="msg" placeholder="Введите ваш отзыв"></textarea>
+                </div>
+                <div class="form-group">
+                    <button class="button">Оставить отзыв</button>
+                </div>
+            </form>
+        </div>
 
         <div id="modal-popup-ok" class="mfp-hide zoom-anim-dialog popup result">
             <p class="heading">Ваша заявка принята =)</p>

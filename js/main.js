@@ -210,5 +210,39 @@ jQuery(document).ready(function($) {
 
 
 
+    /*---------------------------
+                                  Custom file load
+    ---------------------------*/
+    function readURL(input) {
+
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('.user-image').css('background-image', 'url('+e.target.result+')' );
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+
+
+    $('#file-load').on('change', function(event) {
+        event.preventDefault();
+
+        var ext = $(this).val().split('.').pop().toLowerCase();
+        if ($.inArray(ext, ['png','jpg','jpeg']) == -1) {
+            alert('Загрузить изображение можно в форматах .png, .jpg, .jpeg');
+            $(this).val('');
+        }
+
+        /*showing image*/
+        readURL(this);
+
+        var filename = $(this).val().split('/').pop().split('\\').pop();
+
+        $('.file-info__name').text(filename);
+    });
 
 }); // end file
