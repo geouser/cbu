@@ -1,6 +1,8 @@
 .brdcrmbs {
 	position: relative;
-
+	@include m1000 {
+		text-align: left;
+	}
 	.breadcrumbs {
 		position: absolute;
 		right: 15px;
@@ -8,7 +10,11 @@
 		background-color: #DFF1F4;
 		padding: 10px 20px 12px;
 		font-size: 12px;
-
+		@include m1000 {
+	       position: static;
+	       display: inline-block;
+	       margin: 40px 0 0px;
+	    }
 		a {
 			color: $blue;
 			text-decoration: underline;

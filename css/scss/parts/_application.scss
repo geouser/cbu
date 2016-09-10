@@ -18,6 +18,9 @@
         background-color: #FFF;
         -webkit-border-radius: 8px;
                 border-radius: 8px;
+        @include m600 {
+            width: 100%;
+        }
     }
     textarea {
         border: 1px solid #cee6ea;
@@ -41,6 +44,12 @@
         vertical-align: middle;
         margin-left: 25px;
         width: 50%;
+        @include m600 {
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+            margin-left: 0;
+        }
     }
 }
 

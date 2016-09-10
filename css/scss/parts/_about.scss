@@ -1,5 +1,12 @@
 .about__info {
     @include flex($justify: flex-start, $wrap: nowrap);
+    @include m800 {
+        -webkit-justify-content: center;
+                justify-content: center;
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+    }
     &__text {
         margin-right: 20px;
         .exclaim {

@@ -84,8 +84,8 @@
     &.mobile {
         display: none;
         position: absolute;
-        top: 20px;
-        left: 20px;
+        top: 10px;
+        left: 10px;
         @include m1000 {
             display: block;
         }
@@ -329,6 +329,9 @@
                 color: $blue;
                 display: inline-block;
                 vertical-align: middle;
+                @include m1000 {
+                    margin: 5px auto;
+                }
             }
             &:after {
                 content: "";

@@ -60,4 +60,7 @@
     background: #F2F6F7;
     padding: 30px;
     margin-bottom: 25px;
+    @include m600 {
+        padding: 20px;
+    }
 }

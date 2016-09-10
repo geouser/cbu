@@ -59,7 +59,10 @@ h2,
 }
 .page-title {
 	margin-bottom: 0;
-	max-width: 60%
+	max-width: 60%;
+	@include m1000 {
+		max-width: 100%;
+	}
 }
 .titleInfo {
 	font: 16px $sr;
